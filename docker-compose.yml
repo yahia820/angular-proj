@@ -1,0 +1,9 @@
+version: "3.9"
+volumes:
+  my-volume: {}
+services:  
+  frontend:
+    build : .
+    container_name: angular-proj
+    ports:
+      - 9014:80
