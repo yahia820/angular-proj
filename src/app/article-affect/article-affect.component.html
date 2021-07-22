@@ -1,0 +1,19 @@
+<br>
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>Select author</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="member">
+      <mat-option *ngFor="let member of Members" [value]="member.Name">
+        {{member.Name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p> Selected Author:{{selectedValue}}</p>
+
+</form>
+<br>
+<br>
+
+<div fxLayout="row" >
+    <button mat-raised-button color="primary" (click)=add()> Submit</button>
+</div>

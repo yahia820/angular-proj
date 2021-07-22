@@ -1,0 +1,25 @@
+
+{{isFormInEditMode()?'Edit Member':'Creer un nouveau membre' }}
+<form [formGroup]="form" *ngIf="!!form" (ngSubmit)="onSubmit()" >
+    <p>
+        <mat-form-field appearance="legacy">
+            <input matInput placeholder="CIN" formControlName="cin">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <input matInput placeholder="Name" formControlName="Name">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <input matInput placeholder="CV" formControlName="Cv">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <input matInput placeholder="Type" formControlName="Type">
+        </mat-form-field>
+    </p>
+    <button mat-stroked-button color="primary" type="submit">Submit</button>
+</form>
